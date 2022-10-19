@@ -104,3 +104,33 @@ git checkout -b dev
 ```
 dvc add Training_Batch_Files/*.csv Prediction_Batch_files/*.csv
 ```
+##### <b>INSTALL DVC FOR GDRIVE</b>
+```
+pip install dvc[gdrive]
+```
+##### <b>ADD REMOTE STORAGE</b>
+```
+dvc remote add -d storage gdrive://<DRIVE ID>
+
+git add .dvc/config && git commit -m "Configure remote storage"
+```
+##### <b>PUSH THE DATA TO REMOTE</b>
+```
+dvc push
+```
+##### <b>ADD GDRIVE CREDENTIAL TO REPO SECRET</b>
+##### <b>INSTALL PACKAGES IN REQUIREMENTS.TXT</b>
+```
+pip install -r requirements.txt
+```
+##### <b>CREATE A PIPELINE PATH FOR DATA PREPARATION IN SRC DIRECTORY AND IMPORT LIBRARIES</b>
+```
+touch src/pipeline_o1_data_preparation.py
+```
+##### <b>CREATE CONFIG DIRECTORY</b>
+```
+1. mkdir config
+2. In config directory, create params.yaml file.
+3. Create config/schema_training.json in config directory.
+4. Create config/schema_prediction.json in config directory. 
+```
