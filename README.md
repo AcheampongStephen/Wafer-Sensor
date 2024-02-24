@@ -287,7 +287,7 @@ Now the copy of your data will be pushed to the gdrive. Above step will create a
 ###### To retrieve data anytime
 
 ```
-dvc pull
+dvc pull1
 ```
 
 ### STEP 13 Install full requirements.txt as given in the repository
@@ -300,4 +300,20 @@ pip install -r requirements.txt
 
 ```
 git add README.md && git commit -m "update readme" && git push origin dev
+```
+
+#### STEP 14 Create data preparation pipeline
+
+```
+touch src/pipeline_01_data_preparation.py
+```
+
+#### STEP 14 Create config directory / params.yaml (config/params.yaml)
+
+```
+mkdir config
+```
+
+```
+touch config/params.yaml
 ```
