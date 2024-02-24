@@ -316,4 +316,6 @@ mkdir config
 
 ```
 touch config/params.yaml
+touch config/schema_training.json
+touch config/schema_prediction.json
 ```
