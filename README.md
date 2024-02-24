@@ -150,6 +150,10 @@ conda create -n sensor-detection python=3.10 -y
 conda activate sensor-detection
 ```
 
+```
+source activate sensor-detection
+```
+
 ### STEP 2 Create a default structure
 
 - Install cookiecutter template
@@ -204,6 +208,20 @@ dvc init
 
 ```
 dvc add Training_Batch_Files/*.csv Prediction_Batch_files/*.csv
+```
+
+```
+import os
+import glob
+
+data_dirs = ["Training_Batch_Files", "Prediction_Batch_files"]
+
+for data_dir in data_dirs:
+    files = glob.glob(os.path.join("E:\\Wafer Sensor\\Wafer-Sensor", data_dir, "*.csv"))
+    for file_path in files:
+        os.system(f'dvc add "{file_path}"')
+
+print("\n #### All files added to DVC ####")
 ```
 
 ### STEP 8 commit and push to the remote repository

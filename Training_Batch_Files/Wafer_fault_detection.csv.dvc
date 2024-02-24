@@ -1,0 +1,5 @@
+outs:
+- md5: 2dae6309bdb71304f04e5c122c54e2d8
+  size: 342221
+  hash: md5
+  path: Wafer_fault_detection.csv
